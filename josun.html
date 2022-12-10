@@ -1,0 +1,375 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Jua&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <title>조선시대 나의 얼굴은?</title>
+    <link rel="alternate" hreflang="ko" href="https://josun-face-test.netlify.app/" />
+    <link rel="alternate" hreflang="en" href="https://josun-face-test.netlify.app/" />
+    <link rel="alternate" hreflang="es" href="https://josun-face-test.netlify.app/" />
+    <link rel="alternate" hreflang="ja" href="https://josun-face-test.netlify.app/" />
+    <link rel="alternate" hreflang="zh" href="https://josun-face-test.netlify.app/" />
+    <link rel="alternate" hreflang="vi" href="https://josun-face-test.netlify.app/" />
+    <link rel="alternate" hreflang="id" href="https://josun-face-test.netlify.app/" />
+    <link rel="alternate" hreflang="it" href="https://josun-face-test.netlify.app/" />
+    <link rel="alternate" hreflang="th" href="https://josun-face-test.netlify.app/" />
+    <link rel="alternate" hreflang="x-default" href="" />
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5e64b3727e862b06"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-145482737-6"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'UA-145482737-6');
+    </script>
+    
+    <!-- Facebook Pixel Code -->
+<script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '282135873128567');
+    fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=282135873128567&ev=PageView&noscript=1"
+  /></noscript>
+  <!-- End Facebook Pixel Code -->
+</head>
+
+<body>
+    
+    <section class="section">
+        <h1 class="title">나의 얼굴은 조선시대에 어떤계층이었을까?</h1>
+
+            <ins class="kakao_ad_area" style="display:none;"
+    data-ad-unit = "DAN-HrWt73o4beJWTrNT"
+    data-ad-width = "300"
+    data-ad-height = "250"></ins>
+    <script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
+  
+    </section>
+
+    <h3 class="pb-2 d-flex justify-content-center">성별을 선택하세요</h3>
+    <section class="d-flex justify-content-center">
+        <p class="d-flex align-items-center pr-3">여자</p>
+        <div>
+            <input type="checkbox" id="gender">
+            <label for="gender">
+                <span class="knob">
+                    <i></i>
+                </span>
+            </label>
+        </div>
+        <p class="d-flex align-items-center pl-3">남자</p>
+    </section>
+    <script class="jsbin" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <div class="mt-3 container file-upload">
+        <div class="image-upload-wrap">
+            <input class="file-upload-input" type='file' onchange="readURL(this);" accept="image/*" />
+            <div class="drag-text">
+                <img src="../../img/upload.svg" class="mt-5 pt-5 upload" alt="upload-image">
+                <h3 class="mb-5 pb-5 pt-4  upload-text">사진을 업로드 하여 주세요.</h3>
+            </div>
+        </div>
+        <div class="file-upload-content">
+            <img class="file-upload-image" id="face-image" src="#" alt="your image" />
+            <div id="loading" class="animated bounce">
+                <div class="spinner-border" role="status">
+                    <span class="sr-only">Loading...</span>
+                </div>
+                <p class="text-center">AI가 조선시대 계층을 분석중입니다.</p>
+            </div>
+            <p class="result-message"></p>
+            <div id="label-container" class="d-flex flex-column justify-content-around"></div>
+            <div id="addThis" class="addthis_inline_share_toolbox_6lz1"></div>
+            <div class="pt-3 image-title-wrap">
+                <button type="button p-2" class="try-again-btn" onclick="gaReload()">
+                    <span class="try-again-text">다른 사진으로 시도하여 주십시오</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function gaReload() {
+            gtag('event', '다른 사진으로 재시도', {
+                'event_category': '다른 사진으로 재시도'
+            });
+            window.location.reload();
+        }
+        function gaReload1() {
+            gtag('event', '다른 사진으로 재시도 1차', {
+                'event_category': '다른 사진으로 재시도'
+            });
+        }
+        function gaReload2() {
+            gtag('event', '다른 사진으로 재시도 2차', {
+                'event_category': '다른 사진으로 재시도'
+            });
+            window.location.reload();
+        }
+    </script>
+    
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8/dist/teachablemachine-image.min.js"></script>
+    <script>
+        function readURL(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+                reader.onload = function(e) {
+                    $('.image-upload-wrap').hide();
+                    $('#loading').show();
+                    $('.file-upload-image').attr('src', e.target.result);
+                    $('.file-upload-content').show();
+                    $('.image-title').html(input.files[0].name);
+                };
+                reader.readAsDataURL(input.files[0]);
+                init().then(function() {
+                    console.log("hello");
+                    predict();
+                    $('#loading').hide();
+                });
+            } else {
+                removeUpload();
+            }
+        }
+
+        function removeUpload() {
+            $('.file-upload-input').replaceWith($('.file-upload-input').clone());
+            $('.file-upload-content').hide();
+            $('.image-upload-wrap').show();
+        }
+        $('.image-upload-wrap').bind('dragover', function() {
+            $('.image-upload-wrap').addClass('image-dropping');
+        });
+        $('.image-upload-wrap').bind('dragleave', function() {
+            $('.image-upload-wrap').removeClass('image-dropping');
+        });
+    </script>
+    
+    <script type="text/javascript">
+        let URL;
+        const urlMale = "https://teachablemachine.withgoogle.com/models/OmzrwvUru/";
+        const urlFemale = "https://teachablemachine.withgoogle.com/models/wlIMXFZAb/";
+        let model, webcam, labelContainer, maxPredictions;
+        async function init() {
+            if (document.getElementById("gender").checked) {
+                URL = urlMale;
+            } else {
+                URL = urlFemale;
+            }
+            const modelURL = URL + "model.json";
+            const metadataURL = URL + "metadata.json";
+            model = await tmImage.load(modelURL, metadataURL);
+            maxPredictions = model.getTotalClasses();
+            labelContainer = document.getElementById("label-container");
+            for (let i = 0; i < maxPredictions; i++) {
+                var element = document.createElement("div")
+                element.classList.add("d-flex");
+                labelContainer.appendChild(element);
+            }
+        }
+        async function predict() {
+            var image = document.getElementById("face-image")
+            const prediction = await model.predict(image, false);
+            prediction.sort((a, b) => parseFloat(b.probability) - parseFloat(a.probability));
+            console.log(prediction[0].className);
+            var resultTitle, resultExplain;
+            if (document.getElementById("gender").checked) {
+                gtag('event', '조선시대 관상테스트 시작', {
+                    'event_category': '조선시대 관상테스트 시작',
+                    'event_label': '남자'
+                });
+                switch (prediction[0].className) {
+                    case "내시":
+                        resultTitle = "생각만 해도 불쌍한 내시"
+                        resultExplain = "오로지 왕의 곁에서 지키는 충신 내시, 내시부에 속하여 임금의 시중을 들거나 일을 맡아보던 남자. 모두 거세된 사람이었다. '내시 이옵니다~~'"
+                        
+                        gtag('event', '불쌍한 내시상', {'event_category': '남자 결과'});
+                        break;
+                    case "망나니":
+                        resultTitle = "이놈의 목을 쳐라!! 망나니"
+                        resultExplain = "사형을 집행할 때에 죄인의 목을 베던 사람, 헝크러진 머리와 악취가 심하다고함  씻고다니냐??"
+                        
+                        gtag('event', '남자 결과 망나니', {'event_category': '남자 결과'});
+                        break;
+                    case "백정":
+                        resultTitle = "정육점 사장 백정"
+                        resultExplain = " 도살업에 종사하는 사람, 백정은 노비보다도 인식이 안좋았던적이 있다고함. 헤헤  삼겹살 1인분 주세요~~~ "
+                        
+                        gtag('event', '남자 결과 백정 ', {'event_category': '남자 결과'});
+                        break;
+                    case "상놈":
+                        resultTitle = "신분이낮아 차별을 당하는 상놈 "
+                        resultExplain = "신분이 낮은 남자를 낮잡는 말로 본데없고 버릇없는 남자 이거 '완전 ㅇㅇ 이구만~~???'"
+                        
+                        gtag('event', '남자 결과 상놈', {'event_category': '남자 결과'});
+                        break;
+                    case "양반":
+                        resultTitle = "하루가 만사편안 양반"
+                        resultExplain = "새월아 내월아 점잖고 예의 바른 사람. 뭐 흠잡을 때가 없구만????"
+                        
+                        gtag('event', '남자 결과 양반', {'event_category': '남자 결과'});
+                        break;
+                        case "오랑캐":
+                        resultTitle = "만주 여진족의 오랑캐??"
+                        resultExplain = " 오랑캐는 조선시대 중국 사람을 오랑캐라고 부른 것 '너는 말갈족이냐 흉노족이냐?????'"
+                        
+                        gtag('event', '남자 결과 오랑캐', {'event_category': '남자 결과'});
+                        break;
+                        case "왕":
+                        resultTitle = "절대권력 왕"
+                        resultExplain = "한 국가의 최대권력자 당신은 왕의 관상이시군요??? 당신의 남은 생은 아마 화려하게 보낼듯 싶네요."
+                        
+                        gtag('event', '남자 결과 왕', {'event_category': '남자 결과'});
+                        break;
+                        case "평민":
+                        resultTitle = "평범히 열심히사는 평민"
+                        resultExplain = "제일 평범한 계층 뭐... 그냥 매우 평범하신 얼굴이네요 ㅋㅋㅋㅋㅋㅋㅋㅋ"
+                        
+                        gtag('event', '남자 결과 평민', {'event_category': '남자 결과'});
+                        break;
+                    default:
+                        resultTitle = "알수없음"
+                        resultExplain = ""
+                        
+                        gtag('event', '남자 결과 알수없음', {'event_category': '남자 결과'});
+                }
+            } else {
+                gtag('event', '동물상 테스트 수행', {
+                    'event_category': '동물상 테스트 수행',
+                    'event_label': '여자'
+                });
+                switch (prediction[0].className) {
+                    case "궁녀":
+                        resultTitle = "왕의 눈에 들기 위한 궁녀!!"
+                        resultExplain = "궁궐 안에서 왕과 왕비를 가까이 모시는 내명부를 통틀어 이르던 말. 눈밖에 들어 출세한번 해보자고!!!!"
+                        
+                        gtag('event', '여자 결과 궁녀', {'event_category': '여자 결과'});
+                        break;
+                    case "기생":
+                        resultTitle = "조선시대 미스코리아 기생!!"
+                        resultExplain = "술자리에서 노래나 춤으로 흥을 돋우는 것을 직업, 조선시대의 최고로 '이쁜여성'이 가지는 직업 내 수청을 들라!!!!!!!!!"
+                        gtag('event', '여자 결과 기생', {'event_category': '여자 결과'});
+                        break;
+                    case "노비":
+                        resultTitle = " 조선시대의 노비"
+                        resultExplain = "제일 낮은 신분으로 양반이나 권력이 있는 집에서 시중을 들거나 잡일을 하는 사람. 조금더 열심히 살아 봅시다."
+                        
+                        gtag('event', '여자 결과 노비', {'event_category': '여자 결과'});
+                        break;
+                    case "상궁":
+                        resultTitle = "짬먹은 상궁"
+                        resultExplain = "조선 시대에, 내명부의 하나인 여관의 정오품 벼슬. 궁안의 짬밥을 무시하지마!!!!!!!"
+                       
+                        gtag('event', '여자 결과 상궁', {'event_category': '여자 결과'});
+                        break;
+                    case "주모":
+                        resultTitle = "영업의 왕 주모~~"
+                        resultExplain = "술청에서 술을 파는 장사의 달인 '주모~~~~여기 국빱 하나 주이소~~~~~~~'"
+                       
+                        gtag('event', '여자 결과 주모', {'event_category': '여자 결과'});
+                        break;
+                        case "중전":
+                        resultTitle = "조선시대 왕다음의 실세 중전"
+                        resultExplain = "왕의 여자로서 엄청난 권력을 가진사람 왕의 관상인 분과 만나면???  ㄷㄷ;;"
+                        
+                        gtag('event', '남자 결과 중전', {'event_category': '남자 결과'});
+                        break;
+                    default:
+                        resultTitle = "알수없음"
+                        resultExplain = ""
+                        
+                        gtag('event', '여자 결과 알수없음', {'event_category': '여자 결과'});
+                }
+            }
+            var title = "<div class='" + prediction[0].className + "-josun-title'>" + resultTitle + "</div>"
+            var explain = "<div class='josun-explain pt-2'>" + resultExplain + "</div>"
+            
+            $('.result-message').html(title + explain );
+            var barWidth;
+            for (let i = 0; i < maxPredictions; i++) {
+                if (prediction[i].probability.toFixed(2) > 0.1) {
+                    barWidth = Math.round(prediction[i].probability.toFixed(2) * 100) + "%";
+                } else if (prediction[i].probability.toFixed(2) >= 0.01) {
+                    barWidth = "4%"
+                } else {
+                    barWidth = "2%"
+                }
+                var labelTitle;
+                switch (prediction[i].className) {
+                    case "내시":
+                        labelTitle = "내시"
+                        break;
+                    case "망나니":
+                        labelTitle = "망나니"
+                        break;
+                    case "백정":
+                        labelTitle = "백정상"
+                        break;
+                    case "상놈":
+                        labelTitle = "상놈"
+                        break;
+                    case "양반":
+                        labelTitle = "양반"
+                        break;
+                    case "오랑캐":
+                        labelTitle = "오랑캐"
+                        break;
+                    case "왕":
+                        labelTitle = "왕의상"
+                        break;
+                    case "평민":
+                        labelTitle = "평민"
+                        break;
+                    case "궁녀":
+                        labelTitle = "궁녀"
+                        break;
+                    case "기생":
+                        labelTitle = "기생"
+                        break;    
+                    case "노비":
+                        labelTitle = "노비"
+                        break;
+                    case "상궁":
+                        labelTitle = "상궁"
+                        break;
+                    case "주모":
+                        labelTitle = "주모"
+                        break;
+                    case "중전":
+                        labelTitle = "중전"
+                        break;
+                    default:
+                        labelTitle = "알수없음"
+                }
+                var label = "<div class='josun-label d-flex align-items-center'>" + labelTitle + "</div>"
+                var bar = "<div class='bar-container position-relative container'><div class='" + prediction[i].className + "-box'></div><div class='d-flex justify-content-center align-items-center " + prediction[i].className + "-bar' style='width: " + barWidth + "'><span class='d-block percent-text'>" + Math.round(prediction[i].probability.toFixed(2) * 100) + "%</span></div></div>"
+                labelContainer.childNodes[i].innerHTML = label + bar;
+            }
+        }
+    </script>
+
+</body>
+
+</html>
