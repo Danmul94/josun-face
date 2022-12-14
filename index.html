@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="ko">
 
@@ -8,20 +7,28 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css?family=Jua&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <title>조선시대 나의 얼굴은?</title>
-    <link rel="inter" hreflang="ko" href="https://josun-face-test.netlify.app/" />
-    <link rel="inter" hreflang="en" href="https://josun-face-test.netlify.app/" />
-    <link rel="inter" hreflang="es" href="https://josun-face-test.netlify.app/" />
-    <link rel="inter" hreflang="ja" href="https://josun-face-test.netlify.app/" />
-    <link rel="inter" hreflang="zh" href="https://josun-face-test.netlify.app/" />
-    <link rel="inter" hreflang="vi" href="https://josun-face-test.netlify.app/" />
-    <link rel="inter" hreflang="id" href="https://josun-face-test.netlify.app/" />
-    <link rel="inter" hreflang="it" href="https://josun-face-test.netlify.app/" />
-    <link rel="inter" hreflang="th" href="https://josun-face-test.netlify.app/" />
-    <link rel="inter" hreflang="x-default" href="" />
+    <title>얼굴로 보는 나의 조선시대 신분은?</title>
+    <link rel="alternate" hreflang="ko" href="https://josun-face-test.netlify.app/" />
+    <link rel="alternate" hreflang="en" href="https://josun-face-test.netlify.app/" />
+    <link rel="alternate" hreflang="es" href="https://josun-face-test.netlify.app/" />
+    <link rel="alternate" hreflang="ja" href="https://josun-face-test.netlify.app/" />
+    <link rel="alternate" hreflang="zh" href="https://josun-face-test.netlify.app/" />
+    <link rel="alternate" hreflang="vi" href="https://josun-face-test.netlify.app/" />
+    <link rel="alternate" hreflang="id" href="https://josun-face-test.netlify.app/" />
+    <link rel="alternate" hreflang="it" href="https://josun-face-test.netlify.app/" />
+    <link rel="alternate" hreflang="th" href="https://josun-face-test.netlify.app/" />
+    <link rel="alternate" hreflang="x-default" href="https://josun-face-test.netlify.app/" />
+    <meta name="title" content="조선시대 얼굴 테스트">
+    <meta name="subject" content="얼굴로 보는 인공지능 조선의 관상">
+    <link rel="stylesheet" href="../../style.css">
     <link rel="stylesheet" href="css/style.css">
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-   
+
+    <meta property="og:image" content="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fk.kakaocdn.net%2Fdn%2Fc0eq42%2FbtqCQpiFhFn%2F8KPaOP9q8PXpJFRL7if55K%2Fimg.jpg" />
+    <link rel="shortcut icon" href="/assets/images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon">
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5e64b3727e862b06"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-145482737-6"></script>
+    
     <script>
         window.dataLayer = window.dataLayer || [];
 
@@ -31,8 +38,8 @@
         gtag('js', new Date());
         gtag('config', 'UA-145482737-6');
     </script>
-    
-    <!-- 페이스북창에 맞춰서 정렬 -->
+    <script data-ad-client="ca-pub-2962790403778987" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <!-- Facebook Pixel Code -->
 <script>
     !function(f,b,e,v,n,t,s)
     {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -45,27 +52,61 @@
     fbq('init', '282135873128567');
     fbq('track', 'PageView');
   </script>
-  
-  <!-- End Facebook Pixel Code -->
+  <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=282135873128567&ev=PageView&noscript=1"
+  /></noscript>
+
 </head>
 
 <body>
-    
-    <section class="section">
+    <section class="container d-flex flex-column justify-content-center align-items-center">
+        <span class="select-language">Language</span>
+        <select onchange="changeLanguage(this)" class="custom-select col-8">
+            <option value="ko" lang="ko">한국어</option>
+            <option value="en" lang="en">English</option>
+            <option value="es" lang="es">español</option>
+            <option value="ja" lang="ja">日本語</option>
+            <option value="zh" lang="zh">中文</option>
+            <option value="vi" lang="vi">tiếng Việt</option>
+            <option value="id" lang="id">Bahasa Indonesia</option>
+            <option value="it" lang="it">Italiano</option>
+            <option value="th" lang="th">ไทย</option>
+        </select>
+    </section>
+    <script>
+        var ua = navigator.userAgent.toLowerCase();
+        function changeLanguage(lang) {
+            if( ( navigator.userAgent.indexOf('Mac OS') > 0 && navigator.userAgent.indexOf('Safari') <= 0 ) || ( ( navigator.userAgent.indexOf('Android') > 0 && navigator.userAgent.indexOf('wv)') > 0 ) ) ){
+                if (ua.match('android') != null) {
+                    window.open("https://josun-face-test.netlify.app/"+lang.value+"/index.html"); //android
+                } else if (ua.indexOf("iphone")>-1||ua.indexOf("ipad")>-1||ua.indexOf("ipod")>-1) { 
+                    window.location.href = "https://josun-face-test.netlify.app//"+lang.value+"/index.html";
+                } else {
+                    window.location.href = "https://josun-face-test.netlify.app/"+lang.value+"/index.html";
+                }
+            } else {
+                window.location.href = "https://josun-face-test.netlify.app/"+lang.value+"/index.html";
+            }
+        }
+    </script>
 
-
-        <h1 class="title">나의 얼굴은 조선시대에 어떤계층이었을까?</h1>
-       
-       
+    <section>
         <div class="kakao-ad-area1">
-        <ins class="kakao_ad_area" style="display:none;"
-    data-ad-unit = "DAN-8uoI1KMqoWsLUx6P"
-    data-ad-width = "5000"
-    data-ad-height = "180"></ins>
-    <script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
-    </div>
+            <ins class="kakao_ad_area" style="display:none;"
+        data-ad-unit = "DAN-8uoI1KMqoWsLUx6P"
+        data-ad-width = "1000"
+        data-ad-height = "180"></ins>
     
+        </div>
+    </section>
 
+
+
+
+    <section class="section">
+        <h1 class="title">조선시대 얼굴로 보는 계층분석</h1>
+        <h2 class="subtitle">얼굴로 보는 조선시대 신분 분석</h2>
+    </section>
 
     <h3 class="pb-2 d-flex justify-content-center">성별을 선택하세요</h3>
     <section class="d-flex justify-content-center">
@@ -80,38 +121,40 @@
         </div>
         <p class="d-flex align-items-center pl-3">남자</p>
     </section>
-</section>
     <script class="jsbin" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
     <div class="mt-3 container file-upload">
         <div class="image-upload-wrap">
             <input class="file-upload-input" type='file' onchange="readURL(this);" accept="image/*" />
             <div class="drag-text">
                 <img src="../../img/upload.svg" class="mt-5 pt-5 upload" alt="upload-image">
-                <h3 class="mb-5 pb-5 pt-4  upload-text">사진을 업로드 하여 주세요.</h3>
+                <h3 class="mb-5 pb-5 pt-4  upload-text">사진을 업로드하여 주세요.</h3>
             </div>
-
-        
+        </div>
         <div class="file-upload-content">
             <img class="file-upload-image" id="face-image" src="#" alt="your image" />
             <div id="loading" class="animated bounce">
                 <div class="spinner-border" role="status">
                     <span class="sr-only">Loading...</span>
                 </div>
-                <p class="text-center">AI가 조선시대 계층을 분석중입니다.</p>
+                <p class="text-center">분석중입니다.</p>
             </div>
-            <p class="result-message"></p>
+            <p class="result-message">잠시만 기다려 주십니오.</p>
             <div id="label-container" class="d-flex flex-column justify-content-around"></div>
             <div id="addThis" class="addthis_inline_share_toolbox_6lz1"></div>
             <div class="pt-3 image-title-wrap">
                 <button type="button p-2" class="try-again-btn" onclick="gaReload()">
-                    <span class="try-again-text">다른 사진으로 시도하여 주십시오</span>
+                    <span class="try-again-text">다른 사진으로 재시도 하여 주십시오.</span>
                 </button>
             </div>
         </div>
     </div>
-
-
-
+   
+          
+        </div>
+        </div>
+    </div>
+   
+    
     <script>
         function gaReload() {
             gtag('event', '다른 사진으로 재시도', {
@@ -131,7 +174,22 @@
             window.location.reload();
         }
     </script>
-    
+    <script>
+        var disqus_config = function () {
+            this.page.url = "https://josun-face-test.netlify.app/";  // Replace PAGE_URL with your page's canonical URL variable
+            this.page.identifier = "ko"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        };
+        (function() {
+        var d = document,
+            s = d.createElement('script');
+        s.src = 'https://josun-face-test.netlify.app/';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the
+        <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+    </noscript>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
@@ -171,11 +229,10 @@
             $('.image-upload-wrap').removeClass('image-dropping');
         });
     </script>
-    
     <script type="text/javascript">
         let URL;
         const urlMale = "https://teachablemachine.withgoogle.com/models/OmzrwvUru/";
-        const urlFemale = "https://teachablemachine.withgoogle.com/models/jXoY-JutX/";
+        const urlFemale = "https://teachablemachine.withgoogle.com/models/wlIMXFZAb/";
         let model, webcam, labelContainer, maxPredictions;
         async function init() {
             if (document.getElementById("gender").checked) {
@@ -199,26 +256,30 @@
             const prediction = await model.predict(image, false);
             prediction.sort((a, b) => parseFloat(b.probability) - parseFloat(a.probability));
             console.log(prediction[0].className);
-            var resultTitle, resultExplain;
+            var resultTitle, resultExplain, resultCeleb;
             if (document.getElementById("gender").checked) {
                 gtag('event', '조선시대 관상테스트 시작', {
                     'event_category': '조선시대 관상테스트 시작',
                     'event_label': '남자'
                 });
                 switch (prediction[0].className) {
+                    case "":
+                        resultTitle = "귀여운 순둥이 강아지상"
+                        resultExplain = "다정다감하고 귀여운 당신은 모든 사람들에게 즐거움을 주는 호감형이다! 친절하고 활발한 성격으로 어디에서도 인기폭발이며 애교와 웃음이 많아 연인에게 특히나 사랑스럽다. 당신은 애인바라기로 애인의 관심이 부족하면 시무룩해지고 외로움을 타는 모습이 마치 강아지와 똑 닮았다!"
+                        resultCeleb = "강아지상 연예인: 강다니엘, 백현(엑소), 박보검, 송중기"
+                        gtag('event', '남자 결과 강아지상', {'event_category': '남자 결과'});
+                        break;
                     case "내시":
                         resultTitle = "생각만 해도 불쌍한 내시"
                         resultExplain = "오로지 왕의 곁에서 지키는 충신 내시, 내시부에 속하여 임금의 시중을 들거나 일을 맡아보던 남자. 모두 거세된 사람이었다. '내시 이옵니다~~'"
-                        
                         gtag('event', '불쌍한 내시상', {'event_category': '남자 결과'});
                         break;
                     case "망나니":
                         resultTitle = "이놈의 목을 쳐라!! 망나니"
-                        resultExplain = "사형을 집행할 때에 죄인의 목을 베던 사람, 헝크러진 머리와 악취가 심하다고함  씻고다니냐??"
-                        
-                        gtag('event', '남자 결과 망나니', {'event_category': '남자 결과'});
+                        resultExplain = "사형을 집행할때에 죄인의 목을 베던 사람,헝크러진 악취가 심하다고함. 쫌 씻어라 ㅡㅡ 제발~!!"
+                        gtag('event', '망나니', {'event_category': '남자 결과'});
                         break;
-                    case "백정":
+                        case "백정":
                         resultTitle = "정육점 사장 백정"
                         resultExplain = " 도살업에 종사하는 사람, 백정은 노비보다도 인식이 안좋았던적이 있다고함. 헤헤  삼겹살 1인분 주세요~~~ "
                         
@@ -374,19 +435,39 @@
             }
         }
     </script>
-    
-    <div class="kakao_ad_area2">
-        <ins class="kakao_ad_area2" style="display:none;"
-    data-ad-unit = "DAN-Sf0sBzsRuGy1xvsK"
-    data-ad-width = "764"
-    data-ad-height = "180"></ins>
-    <script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
-    </div>
-
-
-
-        
-
+    <script>
+        function iosApp() {
+            document.getElementById("addThis").style.display="none";
+            document.getElementById("disqus_thread").style.display="none";
+            var kakao = document.getElementsByClassName("kakao_ad_area");
+            for (var i = 0; i < kakao.length; i++) {
+              if(kakao[i]) {
+                  kakao[i].style.display="none";
+              }
+            }
+         
+        }
+        $('#appModal').modal();
+    </script>
 </body>
+<!-- 
+image input box
+Copyright (c) 2020 by Aaron Vanston (https://codepen.io/aaronvanston/pen/yNYOXR)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+gender toggle
+Copyright (c) 2020 by Mert Cukuren (https://codepen.io/knyttneve/pen/bPpEZY)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+ -->
 
 </html>
